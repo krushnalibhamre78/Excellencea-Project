@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excellencea - Contact Us</title>
+    <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo" >
+                <img src="images/newlogo.png" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="Company.html">Company</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="Careers.html">Careers</a></li>
+                <li><a href="Success-Stories.html">Success Stories</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="container">
+        <p>We appreciate your queries..</p>
+        <div class="slider">
+            <h1 class="first">Contact</h1>
+            <h1 class="slide"><strong class="second"><img src="images/newlogo.png" alt="logo loading..."></strong></h1>
+        </div>
+        <p><strong>Address:</strong> Office # 301, Vision Flora(Corporate), Pimple Saudagar, Pimple Saudagar, Pune -
+                411027 (Near Dav High School, Kunjir Chouk Above Reliance Smart)</p>
+    </section>
+
+    <section class="container">
+        <h1>General Queries</h1>
+        <div class="main-container">
+            <div class="left-drawer hidden-right">
+                <h2>+1 234 567 890</h2>
+                <p>For telephonic Contact</p>
+            </div>
+            <div class="right-drawer hidden-left">
+                <h2>contact@excellencea.com</h2>
+                <p>Email us</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-container hidden-left">
+        <!-- <div class="main-container">
+            <h2>For Specific Questions, Get In Touch Below</h2>
+        </div> -->
+        <h3>Send us a question</h3>
+        <div class="contact-form">
+            <label for="contact-number">Contact Number</label>
+            <input type="text" name="contact-number" placeholder="Enter Your Contact Number.....">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Enter Your Email...">
+            <label for="message">Suggestion or Message</label>
+            <textarea name="message" rows="3" placeholder="Enter Your Suggestion or Message..."></textarea>
+            <button type="submit">Submit</button>
+        </div>
+    </section>
+
+    <!-- <section id="contact" class="contact-container">
+    </section> -->
+
+    <!--    <div class="company-info">
+        <h3>Company Info</h3>
+            <p><strong>Phone:</strong> +1 234 567 890</p>
+            <p><strong>Email:</strong> contact@excellencea.com</p>
+        </div>
+    </section> -->
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="images/newlogo.png" alt="Logo">
+            </div>
+            <p><strong>Email:</strong> contact@excellencea.com</p>
+            <p><strong>Phone:</strong> +1 234 567 890</p>
+            <a href="https://www.linkedin.com/company/excellencea" target="_blank">
+                <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M22.23 0H1.77C.792 0 0 .773 0 1.727v20.546C0 23.227.792 24 1.77 24h20.46C23.208 24 24 23.227 24 22.273V1.727C24 .773 23.208 0 22.23 0zM7.191 20.452H3.577V9.039h3.614v11.413zM5.384 7.587a2.094 2.094 0 01-2.102-2.102 2.094 2.094 0 012.102-2.101c1.16 0 2.102.942 2.102 2.101a2.095 2.095 0 01-2.102 2.102zm15.067 12.865h-3.614V14.86c0-1.335-.027-3.053-1.861-3.053-1.863 0-2.15 1.45-2.15 2.949v5.696h-3.614V9.039h3.467v1.561h.05c.483-.916 1.662-1.881 3.419-1.881 3.652 0 4.325 2.402 4.325 5.523v6.209h-.002z" />
+                </svg>
+            </a>
+        </div>
+        <p>&copy; 2024 Excellencea. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+    const RightObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show-right');
+            } else {
+                entry.target.classList.remove('show-right');
+            }
+        });
+    });
+    const hiddenElementsright = document.querySelectorAll('.hidden-right');
+    hiddenElementsright.forEach((el) => RightObserver.observe(el));
+
+    const LeftObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show-left');
+            } else {
+                entry.target.classList.remove('show-left');
+            }
+        });
+    });
+    const hiddenElementsleft = document.querySelectorAll('.hidden-left');
+    hiddenElementsleft.forEach((el) => LeftObserver.observe(el));
+</script>
+</html>
